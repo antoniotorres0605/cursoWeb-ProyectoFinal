@@ -1,0 +1,28 @@
+.imgGeneral{
+  max-width: 100%;
+  max-height: 140px;
+}
+
+.imgFooter{
+  @extend .imgGeneral;
+  max-height: 40px;
+}
+
+#imgLogo{
+  @extend .imgGeneral;
+  max-width: 140px;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+#imgBanner{
+  @extend .imgGeneral;
+  max-height: 30%;
+  border: solid 1vh;
+  border-color: rgb(44, 44, 136);
+}
+
+.imgTienda{
+  max-width: 300px;
+}

@@ -1,0 +1,55 @@
+/*HTML*/
+html{
+  background-image: map-get($fondoPantalla, image );
+  background-repeat: map-get($fondoPantalla, repetir );
+  background-size: map-get($fondoPantalla, size );
+  background-attachment: map-get($fondoPantalla, attachment );
+  color: wheat;
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main main"
+    "footer footer"
+    ;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+
+}
+header {
+  /*Background*/
+  grid-area: header;
+  background-color: rgb(33, 37, 41);
+  height: 250px;
+
+  /*Fuente*/
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  animation-name: entrada;
+  animation-duration: 1.5s;
+}
+
+// Variables
+@keyframes entrada {
+  @each $funcionalidad,$color in $colores {
+    #{$funcionalidad}{
+      background-color: $color;
+    }
+  }
+}
+
+.listaNav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#imgCarrito{
+  max-width: 140px;
+  max-height: 140px;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
